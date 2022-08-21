@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {Note} from '../Note';
+import {Note} from '../note';
 
 @Component({
   selector: 'app-editor',
