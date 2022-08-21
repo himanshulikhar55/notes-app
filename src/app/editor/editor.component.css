@@ -1,0 +1,38 @@
+.display {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh;
+}
+
+#editor {
+    display: flex;
+    flex-direction:column;
+    padding: 1vh;
+}
+
+#view-selector {
+    display: flex;
+    flex-direction: row;
+}
+
+#view-selector button {
+    margin: 1vh;
+    background-color: white;
+    border: 0.1vh solid grey;
+}
+
+#view-selector button:active {
+    background-color: lightgrey;
+}
+
+
+#edit-textarea {
+    padding: 1vh;
+    height: 80vh;
+}
+
+#preview {
+    border: 0.1vh solid grey;
+    padding: 1vh;
+    height: 80vh;
+}
