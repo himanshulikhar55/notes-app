@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EditorComponent } from './editor/editor.component';
 import { ShowdownModule } from 'ngx-showdown';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ShowdownModule } from 'ngx-showdown';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ShowdownModule
+    ShowdownModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
