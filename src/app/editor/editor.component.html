@@ -1,1 +1,16 @@
-<p>editor works!</p>
+<div id="editor">
+    <div class="display" id="edit-view" *ngIf="currentView === 'edit'">
+        <label for="edit-textarea">Edit</label>
+        <!-- 600 = maximum number of characters allowed as input. -->
+        <!-- wrap="off" means wrapping is off. Works like a <pre> tag. -->
+        <textarea id="edit-textarea" type="text" [(ngModel)]="text" maxlength="600" wrap="off"></textarea>
+    </div>
+    <div class="display" id="display-view" *ngIf="currentView === 'preview'">
+        <label for="preview">Preview</label>
+        <showdown id="preview" *ngIf="currentView === 'preview'" [value]="text"></showdown>
+    </div>
+    <div id="view-selector">
+        <button (click)="onEdit()">Edit</button>
+        <button (click)="onPreview()">Preview</button>
+    </div>
+</div>

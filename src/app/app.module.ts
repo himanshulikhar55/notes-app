@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EditorComponent } from './editor/editor.component';
+import { ShowdownModule } from 'ngx-showdown';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EditorComponent } from './editor/editor.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ShowdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
