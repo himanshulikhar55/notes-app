@@ -1,6 +1,27 @@
 .display {
     display: flex;
     flex-direction: column;
+    margin: 1vh;
+}
+
+.non-critical-button {
+    background-color: white;
+    border: 0.1vh solid grey;
+}
+
+.non-critical-button:active {
+    background-color: lightgrey;
+}
+
+.critical-button {
+    background-color: red;
+    border: 2px solid orange;
+    color: white;
+}
+
+.critical-button:active {
+    /* background-color: salmon; */
+    border: 2px solid black;
 }
 
 #editor {
@@ -16,26 +37,17 @@
 
 #actions button {
     margin: 1vh;
-    background-color: white;
-    border: 0.1vh solid grey;
-}
-
-#actions button:active {
-    background-color: lightgrey;
 }
 
 
 #edit-textarea {
     padding: 1vh;
-    height: 80vh;
+    height: 60vh;
 }
 
 #preview {
     border: 0.1vh solid grey;
     padding: 1vh;
-    height: 80vh;
+    height: 60vh;
 }
 
-#delete-button {
-    
-}

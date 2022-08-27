@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Note } from './note';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'notes-app';
+  suggestionText: string = "## Heading\nWrite something…";
+  currentNote: Note = {id:1, date: new Date(), content: this.suggestionText};
 }

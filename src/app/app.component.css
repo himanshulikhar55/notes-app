@@ -1,0 +1,12 @@
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+#main app-editor {
+    flex-basis: 50%;
+}
+
+#main app-all-notes {
+    flex-basis: 50%;
+}

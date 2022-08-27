@@ -1,0 +1,28 @@
+#display {
+    border: 1px solid grey;
+    height: 80vh;
+    margin: 1vh;
+}
+
+#display #add-note {
+    margin: 1vh;
+}
+
+#notes {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    padding: 1%;
+}
+
+#notes showdown {
+    box-shadow: 1px 1px 1px 1px lightgray;
+    margin:1vh;
+    padding: 0.5vh;
+    border-radius: 6px;
+    flex-basis: 15vw;
+}
+
+#notes showdown:active {
+    box-shadow: 3px 3px 1px 1px grey;
+}

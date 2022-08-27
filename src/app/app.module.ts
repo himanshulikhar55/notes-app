@@ -8,12 +8,16 @@ import { EditorComponent } from './editor/editor.component';
 import { ShowdownModule } from 'ngx-showdown';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
+import { AllNotesComponent } from './all-notes/all-notes.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditorComponent,
-    HeaderComponent
+    HeaderComponent,
+    AllNotesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

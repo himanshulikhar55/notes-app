@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import {Note} from '../note';
 
@@ -10,10 +10,12 @@ import {Note} from '../note';
 
 export class EditorComponent implements OnInit {
   suggestionText: string = "## Heading\nWrite something…";
-  currentNote: Note | undefined;
+  @Input() currentNote: Note = {id:1, date: new Date(), content: this.suggestionText};
+  @Output() currentNoteChange = new EventEmitter<Note>();
   currentView: "edit" | "preview";
   text: string;
   displayTogether: boolean;
+  
   onEdit(): void {
     if (this.currentView === "preview") {
       this.currentView = "edit";
@@ -25,6 +27,7 @@ export class EditorComponent implements OnInit {
   onPreview(): void {
     if (this.currentView === "edit") {
       this.currentView = "preview";
+      this.currentNoteChange.emit(this.currentNote);
     }
     else {
       // Nothing to do.
@@ -34,9 +37,13 @@ export class EditorComponent implements OnInit {
     // Do nothing for now.
   }
 
+  onEditMouseDown(event: Event): void {
+    this.onEdit();
+  }
+
   constructor() {
     this.currentView = "preview";
-    this.text = this.suggestionText;
+    this.text = this.currentNote.content;
     this.displayTogether = true;
   }
 

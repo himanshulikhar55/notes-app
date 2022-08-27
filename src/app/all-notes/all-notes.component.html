@@ -1,0 +1,5 @@
+<div id="display">
+    <div id="notes">
+        <showdown *ngFor="let note of notes" [value]="note.content" (mousedown)="setCurrentNote(note)"></showdown>
+    </div>
+</div>

@@ -1,17 +1,18 @@
-<div id="editor" (mousedown)="onEdit()">
+<div id="editor">
     <div class="display" id="edit-view" *ngIf="currentView === 'edit'">
         <label for="edit-textarea">Edit</label>
         <!-- 600 = maximum number of characters allowed as input. -->
         <!-- wrap="off" means wrapping is off. Works like a <pre> tag. -->
-        <textarea id="edit-textarea" type="text" [(ngModel)]="text" maxlength="600" wrap="off"></textarea>
+        <textarea id="edit-textarea" type="text" [(ngModel)]="this.currentNote.content" maxlength="600" wrap="off" (keydown.escape)="onPreview()"></textarea>
     </div>
-    <div class="display" id="display-view" *ngIf="currentView === 'preview'">
+    <div class="display" id="display-view" *ngIf="currentView === 'preview'" (mousedown)="onEditMouseDown($event)">
         <label for="preview">Preview</label>
-        <showdown id="preview" *ngIf="currentView === 'preview'" [value]="text"></showdown>
+        <showdown id="preview" *ngIf="currentView === 'preview'" [value]="this.currentNote.content"></showdown>
     </div>
     <div id="actions">
-        <button id="edit-button" (click)="onEdit()">Edit</button>
-        <button id="preview-button" (click)="onPreview()">Preview</button>
-        <button id="delete-button" (click)="onDelete()">Delete</button>
+        <button class="non-critical-button">Add</button>
+        <button class="non-critical-button" (click)="onEdit()">Edit</button>
+        <button class="non-critical-button" (click)="onPreview()">Preview</button>
+        <button class="critical-button" (click)="onDelete()">Delete</button>
     </div>
 </div>

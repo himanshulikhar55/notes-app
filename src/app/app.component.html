@@ -1,2 +1,6 @@
 <app-header></app-header>
-<app-editor></app-editor>
+<app-search></app-search>
+<div id="main">
+    <app-all-notes [(currentNote)]="currentNote"></app-all-notes>
+    <app-editor [currentNote]="currentNote"></app-editor>
+</div>
