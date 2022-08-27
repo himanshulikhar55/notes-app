@@ -1,4 +1,4 @@
-<div id="editor">
+<div id="editor" (mousedown)="onEdit()">
     <div class="display" id="edit-view" *ngIf="currentView === 'edit'">
         <label for="edit-textarea">Edit</label>
         <!-- 600 = maximum number of characters allowed as input. -->
@@ -9,8 +9,9 @@
         <label for="preview">Preview</label>
         <showdown id="preview" *ngIf="currentView === 'preview'" [value]="text"></showdown>
     </div>
-    <div id="view-selector">
-        <button (click)="onEdit()">Edit</button>
-        <button (click)="onPreview()">Preview</button>
+    <div id="actions">
+        <button id="edit-button" (click)="onEdit()">Edit</button>
+        <button id="preview-button" (click)="onPreview()">Preview</button>
+        <button id="delete-button" (click)="onDelete()">Delete</button>
     </div>
 </div>

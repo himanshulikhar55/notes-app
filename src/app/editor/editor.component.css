@@ -9,18 +9,18 @@
     padding: 1vh;
 }
 
-#view-selector {
+#actions {
     display: flex;
     flex-direction: row;
 }
 
-#view-selector button {
+#actions button {
     margin: 1vh;
     background-color: white;
     border: 0.1vh solid grey;
 }
 
-#view-selector button:active {
+#actions button:active {
     background-color: lightgrey;
 }
 
@@ -34,4 +34,8 @@
     border: 0.1vh solid grey;
     padding: 1vh;
     height: 80vh;
+}
+
+#delete-button {
+    
 }

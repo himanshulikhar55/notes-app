@@ -30,7 +30,9 @@ export class EditorComponent implements OnInit {
       // Nothing to do.
     }
   }
-
+  onDelete(): void {
+    // Do nothing for now.
+  }
 
   constructor() {
     this.currentView = "preview";
