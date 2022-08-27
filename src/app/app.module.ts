@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { EditorComponent } from './editor/editor.component';
 import { ShowdownModule } from 'ngx-showdown';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditorComponent
+    EditorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
