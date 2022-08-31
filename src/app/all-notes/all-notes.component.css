@@ -16,13 +16,12 @@
 }
 
 #notes showdown {
-    box-shadow: 1px 1px 1px 1px lightgray;
+    border: 1px solid grey;
     margin:1vh;
     padding: 0.5vh;
-    border-radius: 6px;
     flex-basis: 15vw;
 }
 
 #notes showdown:active {
-    box-shadow: 3px 3px 1px 1px grey;
+    border: 1px solid lightgrey;
 }
