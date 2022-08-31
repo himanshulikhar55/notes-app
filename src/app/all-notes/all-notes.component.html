@@ -1,5 +1,9 @@
 <div id="display">
     <div id="notes">
-        <showdown *ngFor="let note of notes" [value]="note.content" (mousedown)="setCurrentNote(note)"></showdown>
+        <div *ngFor="let note of notes">
+            <p>{{note.date.getDate()}}/{{note.date.getMonth()}}/{{note.date.getFullYear()}}</p>
+            <showdown [value]="note.content.length > 50?note.content.substring(0, 50)+'…':note.content" (mousedown)="setCurrentNote(note)">
+            </showdown>
+        </div>
     </div>
 </div>
