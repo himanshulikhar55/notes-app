@@ -7,5 +7,5 @@ export const NOTES: Note[] = [
   { id: 4, date: new Date(), content: '#### green\na color' },
   { id: 5, date: new Date(), content: '#### yellow\na color' },
   { id: 6, date: new Date(), content: '#### orange\na color' },
-  { id: 7, date: new Date(), content: '#### red\na color.' },
+  { id: 7, date: new Date(), content: '#### red\na color' },
 ];
