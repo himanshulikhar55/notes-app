@@ -23,6 +23,7 @@ import { SearchComponent } from './search/search.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    ShowdownModule,
     NgbModule
   ],
   providers: [],
