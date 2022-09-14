@@ -1,9 +1,15 @@
-<div id="display">
-    <div id="notes">
-        <div *ngFor="let note of notes">
-            <p>{{note.date.getDate()}}/{{note.date.getMonth()}}/{{note.date.getFullYear()}}</p>
-            <showdown [value]="note.content.length > 50?note.content.substring(0, 50)+'…':note.content" (mousedown)="setCurrentNote(note)">
-            </showdown>
+<app-header></app-header>
+<app-search></app-search>
+<div id="main">
+    <!-- <app-all-notes [(currentNote)]="currentNote"></app-all-notes> -->
+    <div id="display">
+        <div id="notes">
+            <div *ngFor="let note of notes">
+                <p>{{note.date.getDate()}}/{{note.date.getMonth()}}/{{note.date.getFullYear()}}</p>
+                <showdown [value]="note.content.length > 50?note.content.substring(0, 50)+'…':note.content" (mousedown)="setCurrentNote(note)">
+                </showdown>
+            </div>
         </div>
     </div>
+    <app-editor [currentNote]="currentNote"></app-editor>
 </div>

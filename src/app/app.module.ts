@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { AllNotesComponent } from './all-notes/all-notes.component';
 import { SearchComponent } from './search/search.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SearchComponent } from './search/search.component';
     EditorComponent,
     HeaderComponent,
     AllNotesComponent,
-    SearchComponent
+    SearchComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

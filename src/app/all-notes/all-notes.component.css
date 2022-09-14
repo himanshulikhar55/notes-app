@@ -25,3 +25,15 @@
 #notes div:active {
     border: 1px solid lightgrey;
 }
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+#main app-editor {
+    flex-basis: 50%;
+}
+
+#main app-all-notes {
+    flex-basis: 50%;
+}
