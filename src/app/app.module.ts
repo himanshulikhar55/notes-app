@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { AllNotesComponent } from './all-notes/all-notes.component';
 import { SearchComponent } from './search/search.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     AppRoutingModule,
     ShowdownModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
