@@ -14,8 +14,7 @@ export class EditorComponent implements OnInit {
   @Output() currentNoteChange = new EventEmitter<Note>();
   currentView: "edit" | "preview";
   text: string;
-  displayTogether: boolean;
-  
+
   onEdit(): void {
     if (this.currentView === "preview") {
       this.currentView = "edit";
@@ -44,7 +43,6 @@ export class EditorComponent implements OnInit {
   constructor() {
     this.currentView = "preview";
     this.text = this.currentNote.content;
-    this.displayTogether = true;
   }
 
   ngOnInit(): void {

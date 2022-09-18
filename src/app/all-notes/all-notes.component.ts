@@ -8,7 +8,7 @@ import { NOTES } from '../mock-notes';
   styleUrls: ['./all-notes.component.css']
 })
 export class AllNotesComponent implements OnInit {
-  notes: Array<Note> = NOTES;
+  notes: Array<Note>;
   title = 'notes-app';
   suggestionText: string = "## Heading\nWrite something…";
   @Input() currentNote: Note = {id:1, date: new Date(), content: this.suggestionText};
@@ -17,9 +17,13 @@ export class AllNotesComponent implements OnInit {
   // @Output to send note for editing to editor.
   @Output() currentNoteChange = new EventEmitter<Note>();
   
-  constructor() { }
+  constructor() {
+    this.notes = [];
+  }
 
   ngOnInit(): void {
+    NOTES.sort((a: Note, b: Note) => b.date.getTime() - a.date.getTime());
+    this.notes = NOTES;
   }
 
   setCurrentNote(note: Note): void {

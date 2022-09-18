@@ -1,7 +1,6 @@
 .display {
     display: flex;
     flex-direction: column;
-    margin: 1vh;
 }
 
 .non-critical-button {
@@ -24,10 +23,21 @@
     border: 2px solid black;
 }
 
+.view-button-highlight {
+    background-color: black;
+    color: white;
+}
+#view-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #editor {
     display: flex;
     flex-direction:column;
     padding: 1vh;
+    margin: 1vh;
 }
 
 #actions {
