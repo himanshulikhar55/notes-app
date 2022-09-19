@@ -24,8 +24,8 @@
 }
 
 .view-button-highlight {
-    background-color: black;
-    color: white;
+    background-color: lightgrey;
+    color: black;
 }
 #view-selector {
     display: flex;

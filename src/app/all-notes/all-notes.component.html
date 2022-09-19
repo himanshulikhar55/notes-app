@@ -3,7 +3,7 @@
 <div id="main">
     <div id="display">
         <div id="notes">
-            <div *ngFor="let note of notes" (mousedown)="setCurrentNote(note)">
+            <div *ngFor="let note of notes" (mousedown)="setCurrentNote(note)" [ngClass]="{'shadow-highlight': note.id === currentNote.id}">
                 <p>{{note.date.getDate()}}/{{note.date.getMonth()}}/{{note.date.getFullYear()}}</p>
                 <hr>
                 <showdown [value]="note.content.length > 50?note.content.substring(0, 50)+'…':note.content">

@@ -1,3 +1,6 @@
+.shadow-highlight {
+    box-shadow: 1px 1px 1px 1px grey;
+}
 #display {
     border: 1px solid grey;
     height: 80vh;
